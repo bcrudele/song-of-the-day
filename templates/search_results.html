@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-weight: bold;
+            color: #555;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <p>Track Information:</p>
+    <ul>
+        <li><strong>Name:</strong> {{ track_info['name'] }}</li>
+        <li><strong>Artist:</strong> {{ track_info['artists'][0]['name'] }}</li>
+        <li><strong>Album:</strong> {{ track_info['album']['name'] }}</li>
+        <li><strong>Spotify URL:</strong> <a href="{{ track_info['external_urls']['spotify'] }}" target="_blank">{{ track_info['external_urls']['spotify'] }}</a></li>
+    </ul>
+</body>
+</html>
